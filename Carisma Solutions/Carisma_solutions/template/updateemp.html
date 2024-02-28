@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Employee</title>
+        <style>
+            body
+            {
+                text-align: center;
+                margin-top:70px;
+            }
+            div
+            {
+                background-color:steelblue;
+                padding:7px;
+            }
+            a
+            {
+                padding:10px;
+                text-decoration: none;
+                color:white;
+            }
+        </style>
+    </head>
+    <body bgcolor="skyblue">
+        <h1>Employee Management</h1>
+        <div>
+            <a href="{% url 'le' %}">Add Employee</a>
+            <a href="/de/">Delete Employee</a>
+            <a href="/se/">Search Employee</a>
+        </div>
+            <h3>Update Employee</h3>
+            {{r}}
+            <form action="/upe/" method="post">
+                {% csrf_token %}
+                Enter the id :<input type="number" name="i"><br><br>
+                Enter the Updated Mobile number:<input type="text" name="m"><br><br>
+                <input type="submit" value="Update">
+            </form>
+    </body>
+</html>

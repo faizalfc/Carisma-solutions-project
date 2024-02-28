@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Employee</title>
+        <style>
+            body
+            {
+                text-align: center;
+                margin-top:70px;
+            }
+            div
+            {
+                background-color:steelblue;
+                padding:7px;
+            }
+            a
+            {
+                padding:10px;
+                text-decoration: none;
+                color:white;
+            }
+        </style>
+    </head>
+    <body bgcolor="skyblue">
+        <h1>Employee Management</h1>
+        <div>
+            <a href="{% url 'le' %}">Add Employee</a>
+            <a href="/ue/">update Empoyee</a>
+            <a href="/de/">Delete Employee</a>
+            <a href="/se/">Search Employee</a>
+        </div>
+            <h3>Employee Information :</h3>
+            ............................................<br>        
+            Employee Id : {{ei}}<br>
+            Employee Name: {{en}}<br>
+            Employee Mobile Number: {{em}}<br>
+            Employee Email : {{eemail}}<br>
+            Employee Date of birth: {{edob}}<br>
+        ............................................    
+    </body>
+</html>

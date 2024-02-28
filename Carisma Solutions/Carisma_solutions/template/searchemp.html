@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Employee</title>
+        <style>
+            body
+            {
+                text-align: center;
+                margin-top:70px;
+            }
+            div
+            {
+                background-color:steelblue;
+                padding:7px;
+            }
+            a
+            {
+                padding:10px;
+                text-decoration: none;
+                color:white;
+            }
+        </style>
+    </head>
+    <body bgcolor="skyblue">
+        <h1>Employee Management</h1>
+        <div>
+            <a href="{% url 'le' %}">Add Employee</a>
+            <a href="/ue/">update Empoyee</a>
+            <a href="/de/">Delete Employee</a>
+        </div>
+            <h3>Search Employee</h3>
+            {{r}}
+            <form action="/semp/" method="post">
+                {% csrf_token %}
+                Enter the id :<input type="number" name="i"><br><br>
+                <input type="submit" value="search">
+            </form>
+    </body>
+</html>
